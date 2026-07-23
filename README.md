@@ -69,10 +69,6 @@ https://novacart-ecommerce-7yvk.onrender.com
 
 https://github.com/Rocarina/novacart-ecommerce
 
-## 📷 Screenshots
-
-(Add screenshots here if required.)
-
 ## 👩‍💻 Author
 
 **Tanvi Satej Verlecar**
