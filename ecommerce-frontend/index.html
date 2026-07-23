@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaCart | Mini E-Commerce Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-store"></i>
+
+        <span>NovaCart</span>
+
+    </div>
+
+    <button class="logoutBtn" onclick="logoutUser()">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Shop Smart. Shop Better.</h1>
+
+    <p>
+        Discover Electronics, Fashion, Books, Home Essentials and Grocery
+        all in one place.
+    </p>
+
+</section>
+
+<div class="container">
+
+<!-- ================= REGISTER ================= -->
+
+<div id="registerSection" class="auth-card">
+
+<h2>Create Account</h2>
+
+<input
+type="text"
+id="registerName"
+placeholder="Full Name">
+
+<input
+type="email"
+id="registerEmail"
+placeholder="Email">
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Password">
+
+<button onclick="registerUser()">
+
+Create Account
+
+</button>
+
+<p>
+
+Already have an account?
+
+<b>Login below.</b>
+
+</p>
+
+</div>
+
+<!-- ================= LOGIN ================= -->
+
+<div id="loginSection" class="auth-card">
+
+<h2>Login</h2>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="Email">
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Password">
+
+<button onclick="loginUser()">
+
+Login
+
+</button>
+
+</div>
+
+<!-- ================= STORE ================= -->
+
+<div id="storeSection" style="display:none;">
+
+<!-- Search -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="Search Products...">
+
+<select id="category">
+
+<option value="All">All Categories</option>
+
+<option value="Electronics">Electronics</option>
+
+<option value="Fashion">Fashion</option>
+
+<option value="Books">Books</option>
+
+<option value="Home">Home</option>
+
+<option value="Grocery">Grocery</option>
+
+</select>
+
+<button onclick="loadProducts()">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+</div>
+
+<!-- Products -->
+
+<h2 class="section-title">
+
+Featured Products
+
+</h2>
+
+<div id="productList"></div>
+
+<!-- Cart -->
+
+<h2 class="section-title">
+
+Shopping Cart
+
+</h2>
+
+<div id="cart"></div>
+
+<div class="cart-buttons">
+
+<button class="secondaryBtn" onclick="loadCart()">
+
+Refresh Cart
+
+</button>
+
+<button class="primaryBtn" onclick="showCheckoutForm()">
+
+Proceed To Checkout
+
+</button>
+
+</div>
+
+<!-- ================= Checkout Modal ================= -->
+
+<div id="checkoutModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeCheckout()">&times;</span>
+
+        <h2 class="section-title">
+
+            Checkout
+
+        </h2>
+
+        <div class="checkout-grid">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Full Name">
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Email Address">
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Phone Number">
+
+            <input
+                type="text"
+                id="customerCity"
+                placeholder="City">
+
+            <input
+                type="text"
+                id="customerPincode"
+                placeholder="Pincode">
+
+            <select id="paymentMethod">
+
+                <option value="">Payment Method</option>
+                <option>Cash on Delivery</option>
+                <option>UPI</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+
+            </select>
+
+            <textarea
+                id="customerAddress"
+                rows="5"
+                placeholder="Delivery Address"></textarea>
+
+        </div>
+
+        <button class="placeOrderBtn" onclick="placeOrder()">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            Place Order
+
+        </button>
+
+    </div>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2026 NovaCart | Built by Tanvi Verlecar
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
