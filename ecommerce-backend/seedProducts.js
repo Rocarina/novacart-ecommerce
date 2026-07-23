@@ -36,7 +36,7 @@ mongoose
             description: "100% Cotton Regular Fit T-Shirt",
             price: 599,
             category: "Fashion",
-            image: "http://localhost:3000/images/Men's_t-shirt.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Men's_t-shirt.png",
             stock: 70
         },
         {
