@@ -1,5 +1,5 @@
 // Backend API URL
-const API = "http://localhost:3000";
+const API = "https://novacart-ecommerce-7yvk.onrender.com";
 
 // Authentication Token
 let token = localStorage.getItem("token") || "";
