@@ -18,7 +18,7 @@ mongoose
             description: "Ergonomic wireless mouse with USB receiver",
             price: 799,
             category: "Electronics",
-            image: "http://localhost:3000/images/Wireless_Mouse.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Wireless_Mouse.png",
             stock: 50
         },
         {
@@ -26,7 +26,7 @@ mongoose
             description: "Noise cancelling wireless headphones",
             price: 2499,
             category: "Electronics",
-            image: "http://localhost:3000/images/Bluetooth_Headphone.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Bluetooth_Headphone.png",
             stock: 30
         },
 
@@ -44,7 +44,7 @@ mongoose
             description: "Comfortable lightweight sports shoes",
             price: 2999,
             category: "Fashion",
-            image: "http://localhost:3000/images/Running_shoes.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Running_shoes.png",
             stock: 25
         },
 
@@ -54,7 +54,7 @@ mongoose
             description: "Build good habits and break bad ones",
             price: 499,
             category: "Books",
-            image: "http://localhost:3000/images/Atomic_habits.jpg",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Atomic_habits.jpg",
             stock: 40
         },
         {
@@ -62,7 +62,7 @@ mongoose
             description: "A Handbook of Agile Software Craftsmanship",
             price: 899,
             category: "Books",
-            image: "http://localhost:3000/images/Clean_code.jpg",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Clean_code.jpg",
             stock: 20
         },
 
@@ -72,7 +72,7 @@ mongoose
             description: "LED Study Table Lamp",
             price: 899,
             category: "Home",
-            image: "http://localhost:3000/images/Table_lamp.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Table_lamp.png",
             stock: 30
         },
         {
@@ -80,7 +80,7 @@ mongoose
             description: "Modern Decorative Wall Clock",
             price: 699,
             category: "Home",
-            image: "http://localhost:3000/images/Wall_clock.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Wall_clock.png",
             stock: 18
         },
 
@@ -90,7 +90,7 @@ mongoose
             description: "Premium Quality Basmati Rice 5kg",
             price: 699,
             category: "Grocery",
-            image: "http://localhost:3000/images/Basmati_Rice.png",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Basmati_Rice.png",
             stock: 60
         },
         {
@@ -98,7 +98,7 @@ mongoose
             description: "Extra Virgin Olive Oil 1L",
             price: 999,
             category: "Grocery",
-            image: "http://localhost:3000/images/Olive_oil.jpg",
+            image: "https://novacart-ecommerce-7yvk.onrender.com/images/Olive_oil.jpg",
             stock: 35
         }
     ];
