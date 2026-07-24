@@ -4,27 +4,14 @@ const router = express.Router();
 const Product = require("../models/Product");
 const auth = require("../middleware/auth");
 
-// GET Products with Search & Filter
+// GET Products (Debug)
 router.get("/", async (req, res) => {
   try {
-    const { search, category } = req.query;
 
-    let filter = {};
+    const count = await Product.countDocuments();
+    console.log("Total products in DB:", count);
 
-    if (search) {
-      filter.name = {
-        $regex: search,
-        $options: "i",
-      };
-    }
-
-    if (category && category !== "All") {
-      filter.category = category;
-    }
-
-    const products = await Product.find(filter).sort({
-      createdAt: -1,
-    });
+    const products = await Product.find();
 
     res.json(products);
 
