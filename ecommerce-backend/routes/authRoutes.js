@@ -9,14 +9,19 @@ const User = require("../models/User");
 // ==============================
 router.post("/register", async (req, res) => {
   try {
+
     const name = req.body.name.trim();
     const email = req.body.email.trim().toLowerCase();
     const password = req.body.password;
 
+    console.log("Register Request:", { name, email });
+
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
+      console.log("User already exists");
       return res.status(400).json({
+        success: false,
         message: "User already exists",
       });
     }
@@ -29,7 +34,9 @@ router.post("/register", async (req, res) => {
       password: hashedPassword,
     });
 
-    await user.save();
+    const savedUser = await user.save();
+
+    console.log("Saved User:", savedUser);
 
     res.status(201).json({
       success: true,
@@ -37,10 +44,14 @@ router.post("/register", async (req, res) => {
     });
 
   } catch (err) {
+
+    console.log("REGISTER ERROR:", err);
+
     res.status(500).json({
       success: false,
       message: err.message,
     });
+
   }
 });
 
